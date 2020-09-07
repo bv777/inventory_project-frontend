@@ -1,18 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <CurrentInventoryTable/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CurrentInventoryTable from './components/CurrentInventoryTable.vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+// import './custom.scss'
+
+import Vue from 'vue'
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    CurrentInventoryTable,
+  },
 }
 </script>
 
@@ -24,5 +31,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  font-size: large;
 }
 </style>
