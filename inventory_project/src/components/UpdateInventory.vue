@@ -106,6 +106,20 @@ export default {
             },
         };
         console.log(req);
+        /*eslint-disable */
+        try {
+          const config = {
+            method: 'put',
+            url: `${process.env.VUE_APP_INVENTORY_MANAGEMENT_HOST}/api/inventoryManagment/updateInventoryItem`,
+            headers: { 
+              'Content-Type': 'application/json'
+            },
+            data : JSON.stringify(req),
+            crossdomain: true,
+          };
+          let res = await axios(config);
+        } catch (e) {}
+        /*eslint-enable */
       },
       isPositive(num, floatType) {
           if (num === null) return false;
