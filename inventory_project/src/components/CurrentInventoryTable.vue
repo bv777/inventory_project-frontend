@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="my-5">Current Inventory Table</h1>
+    <h1 class="my-5">Current Inventory</h1>
     <b-table
       :busy="!rendered"
       :field="fields"
@@ -49,8 +49,7 @@ export default {
         host: process.env.VUE_APP_INVENTORY_MANAGEMENT_HOST,
     };
   },
-  computed() {
-    return {
+  computed: {
       rowData() {
         const rows = [];
         this.tableData.array.forEach((value) => {
@@ -63,7 +62,6 @@ export default {
         });
         return rows;
       }
-    }
   },
   mounted() {
     axios({

@@ -1,13 +1,12 @@
 <template>
   <div id="app">
-    <!-- <CurrentInventoryTable/> -->
-    <UpdateInventory/>
+    <Main/>
   </div>
 </template>
 
 <script>
 // import CurrentInventoryTable from './components/CurrentInventoryTable.vue'
-import UpdateInventory from './components/UpdateInventory.vue'
+import Main from './components/Main.vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -21,7 +20,7 @@ export default {
   name: 'App',
   components: {
     // CurrentInventoryTable,
-    UpdateInventory,
+    Main,
   },
 }
 </script>
